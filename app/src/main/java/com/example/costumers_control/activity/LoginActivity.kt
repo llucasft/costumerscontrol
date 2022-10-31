@@ -1,9 +1,8 @@
-package com.example.costumers_control
+package com.example.costumers_control.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.costumers_control.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {

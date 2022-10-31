@@ -1,4 +1,4 @@
-package com.example.costumers_control
+package com.example.costumers_control.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
