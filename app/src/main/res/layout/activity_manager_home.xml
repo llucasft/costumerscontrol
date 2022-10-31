@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activity.ManagerHomeActivity">
+
+        <TextView
+            android:id="@+id/tvWelcomeManager"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Bem vindo(a), Manager"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="42sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvWhatToDo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="O que gostaria de fazer?"
+            android:layout_marginTop="28dp"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@id/tvWelcomeManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/btnAddCostumer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adicionar cliente"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/btnQueryCostumer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="consultar clientes"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/btnAddCostumer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/btnManagerEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="alterar meus dados"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/btnQueryCostumer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
