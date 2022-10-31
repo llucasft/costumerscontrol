@@ -1,5 +1,6 @@
 package com.example.costumers_control
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -14,7 +15,9 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         
         binding.tvRegister.setOnClickListener {
-            Toast.makeText(this, "Text Clicked", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, RegisterFormActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
