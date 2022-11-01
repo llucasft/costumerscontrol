@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Costumerscontrol"
         tools:targetApi="31">
         <activity
-            android:name=".RegisterCostumerForm"
+            android:name=".activity.RegisterCostumerForm"
             android:exported="false" />
         <activity
             android:name=".activity.ManagerHomeActivity"
