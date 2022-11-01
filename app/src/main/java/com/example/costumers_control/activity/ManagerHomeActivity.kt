@@ -12,5 +12,8 @@ class ManagerHomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityManagerHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val welcomeName = intent.getStringExtra("Name")
+        binding.tvWelcomeManager.text = "Bem vindo(a), " + welcomeName
     }
 }
