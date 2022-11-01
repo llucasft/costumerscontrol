@@ -1,5 +1,6 @@
 package com.example.costumers_control.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.costumers_control.R
@@ -15,5 +16,11 @@ class ManagerHomeActivity : AppCompatActivity() {
 
         val welcomeName = intent.getStringExtra("Name")
         binding.tvWelcomeManager.text = "Bem vindo(a), " + welcomeName
+
+        binding.btnAddCostumer.setOnClickListener {
+            val intent = Intent(this@ManagerHomeActivity, RegisterCostumerForm::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

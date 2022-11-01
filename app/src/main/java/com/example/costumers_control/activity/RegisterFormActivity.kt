@@ -33,6 +33,7 @@ class RegisterFormActivity : AppCompatActivity() {
                 val intent = Intent(this, ManagerHomeActivity::class.java)
                 intent.putExtra("Name", newManager.name)
                 startActivity(intent)
+                finish()
             } catch (e: Exception) {
                 Toast.makeText(
                     this,
