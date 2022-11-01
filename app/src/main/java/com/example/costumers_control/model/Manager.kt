@@ -8,10 +8,9 @@ import kotlinx.parcelize.Parcelize
 @Entity
 @Parcelize
 data class Manager(
-    @PrimaryKey(autoGenerate = true)
-    val id: Long = 0L,
-    val name: String,
+    @PrimaryKey
     val cpf: String,
+    val name: String,
     val userName: String,
     val password: String
 ) : Parcelable
