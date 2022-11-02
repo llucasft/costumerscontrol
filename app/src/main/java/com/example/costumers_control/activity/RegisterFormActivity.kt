@@ -53,7 +53,7 @@ class RegisterFormActivity : AppCompatActivity() {
 
     private fun registerNewManager(): Manager {
         with(binding) {
-            val managerName = etRegisterUserName.text.toString()
+            val managerName = etRegisterManagerName.text.toString()
             val managerCpf = etRegisterCPF.text.toString()
             val managerLogin = etRegisterUserLogin.text.toString()
             val managerPassword = etRegisterUserPassword.text.toString()

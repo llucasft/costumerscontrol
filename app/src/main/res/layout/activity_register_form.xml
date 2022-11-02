@@ -27,7 +27,7 @@
             app:layout_constraintVertical_bias="0.35" />
 
         <EditText
-            android:id="@+id/etRegisterUserName"
+            android:id="@+id/etRegisterManagerName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
