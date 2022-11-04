@@ -3,6 +3,7 @@ package com.example.costumers_control.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.example.costumers_control.R
 import com.example.costumers_control.database.AppDatabase
 import com.example.costumers_control.databinding.ActivityRegisterCostumerFormBinding
@@ -25,10 +26,53 @@ class RegisterCostumerForm : AppCompatActivity() {
 
         binding.btnCostumerRegisterSave.setOnClickListener {
             val newCostumer = registerNewCostumer()
-            costumerDao.addNewCostumer(newCostumer)
+            //val allFieldsFilled = checkRequiredFields()
+            with(binding){
+                if (
+                    etCostumerRegisterCpf.hint.isBlank() ||
+                    etCostumerRegisterName.text.isBlank() ||
+                    etCostumerRegisterPhoneNumber.text.isBlank() ||
+                    etCostumerRegisterAddress.text.isBlank()) {
+                    Toast.makeText(
+                        this@RegisterCostumerForm,
+                        "Fill all the required data to proceed",
+                        Toast.LENGTH_LONG
+                    )
+                        .show()
+                    etCostumerRegisterCpf.hint = "This field is required"
+                    etCostumerRegisterName.hint = "This field is required"
+                    etCostumerRegisterPhoneNumber.hint = "This field is required"
+                    etCostumerRegisterAddress.hint = "This field is required"
+                }
+                else {
+                    costumerDao.addNewCostumer(newCostumer)
+                }
+            }
+
             Log.i("RegisterCostumer", "Costumer ${newCostumer.name} added successfully")
         }
     }
+
+//    private fun checkRequiredFields() {
+//        with(binding){
+//            if (
+//                etCostumerRegisterCpf.hint.isBlank() ||
+//                etCostumerRegisterName.text.isBlank() ||
+//                etCostumerRegisterPhoneNumber.text.isBlank() ||
+//                etCostumerRegisterAddress.text.isBlank()) {
+//                Toast.makeText(
+//                    this@RegisterCostumerForm,
+//                    "Fill all the required data to proceed",
+//                    Toast.LENGTH_LONG
+//                )
+//                    .show()
+//                etCostumerRegisterCpf.hint = "This field is required"
+//                etCostumerRegisterName.hint = "This field is required"
+//                etCostumerRegisterPhoneNumber.hint = "This field is required"
+//                etCostumerRegisterAddress.hint = "This field is required"
+//            }
+//        }
+//    }
 
     private fun registerNewCostumer(): Costumer {
         with(binding) {
