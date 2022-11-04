@@ -12,9 +12,9 @@ data class Costumer(
         @PrimaryKey
         var cpf: String,
         var name: String,
-        var profession: String?,
-        var amountSpent: BigDecimal?,
-        var email: String,
+        var profession: String? = null,
+        var amountSpent: BigDecimal? = null,
+        var email: String? = null,
         var phoneNumber: String?,
         var address: String
 ) : Parcelable
