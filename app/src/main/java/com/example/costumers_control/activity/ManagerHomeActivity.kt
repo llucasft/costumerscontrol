@@ -22,5 +22,11 @@ class ManagerHomeActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        binding.btnQueryCostumer.setOnClickListener {
+            val intent = Intent(this@ManagerHomeActivity, CustomerDetailActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }
