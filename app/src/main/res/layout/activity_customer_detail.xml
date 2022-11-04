@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
-        android:id="@+id/btnQueryCostumer"
+        android:id="@+id/btnQueryCustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="search costumer"
@@ -45,7 +45,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/btnQueryCostumer"
+        app:layout_constraintTop_toBottomOf="@id/btnQueryCustomer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">

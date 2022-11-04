@@ -1,11 +1,11 @@
-package com.example.costumers_control.activity
+package com.example.customers_control.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.costumers_control.database.AppDatabase
-import com.example.costumers_control.databinding.ActivityLoginBinding
+import com.example.customers_control.database.AppDatabase
+import com.example.customers_control.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 

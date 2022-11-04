@@ -1,10 +1,9 @@
-package com.example.costumers_control.activity
+package com.example.customers_control.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.costumers_control.R
-import com.example.costumers_control.databinding.ActivityManagerHomeBinding
+import com.example.customers_control.databinding.ActivityManagerHomeBinding
 
 class ManagerHomeActivity : AppCompatActivity() {
 
@@ -17,13 +16,13 @@ class ManagerHomeActivity : AppCompatActivity() {
         val welcomeName = intent.getStringExtra("Name")
         binding.tvWelcomeManager.text = "Bem vindo(a), " + welcomeName
 
-        binding.btnAddCostumer.setOnClickListener {
-            val intent = Intent(this@ManagerHomeActivity, RegisterCostumerForm::class.java)
+        binding.btnAddCustomer.setOnClickListener {
+            val intent = Intent(this@ManagerHomeActivity, RegisterCustomerForm::class.java)
             startActivity(intent)
             finish()
         }
 
-        binding.btnQueryCostumer.setOnClickListener {
+        binding.btnQueryCustomer.setOnClickListener {
             val intent = Intent(this@ManagerHomeActivity, CustomerDetailActivity::class.java)
             startActivity(intent)
             finish()

@@ -10,10 +10,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".activity.RegisterCostumerForm">
+        tools:context=".activity.RegisterCustomerForm">
 
         <TextView
-            android:id="@+id/tvCostumerRegisterHeader"
+            android:id="@+id/tvCustomerRegisterHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -21,7 +21,7 @@
             android:text="Insert client's data:"
             android:textSize="26sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/etCostumerRegisterName"
+            app:layout_constraintBottom_toTopOf="@id/etCustomerRegisterName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.475"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/etCostumerRegisterName"
+            android:id="@+id/etCustomerRegisterName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -39,10 +39,10 @@
             android:inputType="textCapWords"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/etCostumerRegisterCpf" />
+            app:layout_constraintBottom_toTopOf="@id/etCustomerRegisterCpf" />
 
         <EditText
-            android:id="@+id/etCostumerRegisterCpf"
+            android:id="@+id/etCustomerRegisterCpf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -53,10 +53,10 @@
             android:maxLength="11"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/etCostumerRegisterProfession" />
+            app:layout_constraintBottom_toTopOf="@id/etCustomerRegisterProfession" />
 
         <EditText
-            android:id="@+id/etCostumerRegisterProfession"
+            android:id="@+id/etCustomerRegisterProfession"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -66,10 +66,10 @@
             android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/etCostumerRegisterAmountSpent" />
+            app:layout_constraintBottom_toTopOf="@id/etCustomerRegisterAmountSpent" />
 
         <EditText
-            android:id="@+id/etCostumerRegisterAmountSpent"
+            android:id="@+id/etCustomerRegisterAmountSpent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -80,10 +80,10 @@
             android:maxLength="11"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/etCostumerRegisterEmail" />
+            app:layout_constraintBottom_toTopOf="@id/etCustomerRegisterEmail" />
 
         <EditText
-            android:id="@+id/etCostumerRegisterEmail"
+            android:id="@+id/etCustomerRegisterEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -93,10 +93,10 @@
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/etCostumerRegisterPhoneNumber" />
+            app:layout_constraintBottom_toTopOf="@id/etCustomerRegisterPhoneNumber" />
 
         <EditText
-            android:id="@+id/etCostumerRegisterPhoneNumber"
+            android:id="@+id/etCustomerRegisterPhoneNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -106,10 +106,10 @@
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/etCostumerRegisterAddress" />
+            app:layout_constraintBottom_toTopOf="@id/etCustomerRegisterAddress" />
 
         <EditText
-            android:id="@+id/etCostumerRegisterAddress"
+            android:id="@+id/etCustomerRegisterAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -119,10 +119,10 @@
             android:inputType="textCapSentences"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/btnCostumerRegisterSave" />
+            app:layout_constraintBottom_toTopOf="@id/btnCustomerRegisterSave" />
 
         <Button
-            android:id="@+id/btnCostumerRegisterSave"
+            android:id="@+id/btnCustomerRegisterSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="save"

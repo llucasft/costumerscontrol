@@ -1,4 +1,4 @@
-package com.example.costumers_control
+package com.example.customers_control
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

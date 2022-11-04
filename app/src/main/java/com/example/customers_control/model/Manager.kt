@@ -1,4 +1,4 @@
-package com.example.costumers_control.model
+package com.example.customers_control.model
 
 import android.os.Parcelable
 import androidx.room.Entity

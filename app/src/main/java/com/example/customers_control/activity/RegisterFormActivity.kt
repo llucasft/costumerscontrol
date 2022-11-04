@@ -1,14 +1,13 @@
-package com.example.costumers_control.activity
+package com.example.customers_control.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.example.costumers_control.database.AppDatabase
-import com.example.costumers_control.database.dao.ManagerDao
-import com.example.costumers_control.databinding.ActivityRegisterFormBinding
-import com.example.costumers_control.model.Manager
+import com.example.customers_control.database.AppDatabase
+import com.example.customers_control.databinding.ActivityRegisterFormBinding
+import com.example.customers_control.model.Manager
 
 class RegisterFormActivity : AppCompatActivity() {
 

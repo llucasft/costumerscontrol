@@ -1,4 +1,4 @@
-package com.example.costumers_control
+package com.example.customers_control
 
 import org.junit.Test
 

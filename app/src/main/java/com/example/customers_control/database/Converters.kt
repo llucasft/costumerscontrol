@@ -1,4 +1,4 @@
-package com.example.costumers_control.database
+package com.example.customers_control.database
 
 import androidx.room.TypeConverter
 import java.math.BigDecimal

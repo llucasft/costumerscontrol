@@ -1,9 +1,9 @@
-package com.example.costumers_control.database.dao
+package com.example.customers_control.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.costumers_control.model.Manager
+import com.example.customers_control.model.Manager
 
 @Dao
 interface ManagerDao {
