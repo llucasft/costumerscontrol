@@ -26,25 +26,40 @@ class RegisterCustomerForm : AppCompatActivity() {
         binding.btnCustomerRegisterSave.setOnClickListener {
             val newCustomer = registerNewCustomer()
             //val allFieldsFilled = checkRequiredFields()
-            with(binding){
+            with(binding) {
                 if (
                     etCustomerRegisterCpf.hint.isBlank() ||
                     etCustomerRegisterName.text.isBlank() ||
                     etCustomerRegisterPhoneNumber.text.isBlank() ||
-                    etCustomerRegisterAddress.text.isBlank()) {
+                    etCustomerRegisterAddress.text.isBlank()
+                ) {
                     Toast.makeText(
                         this@RegisterCustomerForm,
                         "Fill all the required data to proceed",
                         Toast.LENGTH_LONG
                     )
                         .show()
-                    etCustomerRegisterCpf.hint = "This field is required"
-                    etCustomerRegisterName.hint = "This field is required"
-                    etCustomerRegisterPhoneNumber.hint = "This field is required"
-                    etCustomerRegisterAddress.hint = "This field is required"
-                }
-                else {
-                    customerDao.addNewCustomer(newCustomer)
+                    etCustomerRegisterCpf.error = "This field is required"
+                    etCustomerRegisterName.error = "This field is required"
+                    etCustomerRegisterPhoneNumber.error = "This field is required"
+                    etCustomerRegisterAddress.error = "This field is required"
+                } else {
+                    val verificaCpf = verificaCpfCadastrado(newCustomer.cpf)
+                    if (verificaCpf) {
+                        Toast.makeText(
+                            this@RegisterCustomerForm,
+                            "Usuário já cadastrado!",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        customerDao.addNewCustomer(newCustomer)
+                        Toast.makeText(
+                            this@RegisterCustomerForm,
+                            "Customer ${newCustomer.name} added successfully",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        finish()
+                    }
                 }
             }
 
@@ -52,26 +67,13 @@ class RegisterCustomerForm : AppCompatActivity() {
         }
     }
 
-//    private fun checkRequiredFields() {
-//        with(binding){
-//            if (
-//                etCostumerRegisterCpf.hint.isBlank() ||
-//                etCostumerRegisterName.text.isBlank() ||
-//                etCostumerRegisterPhoneNumber.text.isBlank() ||
-//                etCostumerRegisterAddress.text.isBlank()) {
-//                Toast.makeText(
-//                    this@RegisterCostumerForm,
-//                    "Fill all the required data to proceed",
-//                    Toast.LENGTH_LONG
-//                )
-//                    .show()
-//                etCostumerRegisterCpf.hint = "This field is required"
-//                etCostumerRegisterName.hint = "This field is required"
-//                etCostumerRegisterPhoneNumber.hint = "This field is required"
-//                etCostumerRegisterAddress.hint = "This field is required"
-//            }
-//        }
-//    }
+    private fun verificaCpfCadastrado(cpf: String): Boolean {
+        var verificacao = false
+        if (customerDao.queryCustomer(cpf) != null) {
+            verificacao = true
+        }
+        return verificacao
+    }
 
     private fun registerNewCustomer(): Customer {
         with(binding) {

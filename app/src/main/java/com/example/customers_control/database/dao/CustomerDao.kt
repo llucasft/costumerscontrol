@@ -12,4 +12,5 @@ interface CustomerDao {
 
     @Query("SELECT * FROM Customer WHERE cpf = :cpf")
     fun queryCustomer(cpf: String): Customer?
+
 }
