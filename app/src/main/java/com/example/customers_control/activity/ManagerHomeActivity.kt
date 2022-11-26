@@ -19,13 +19,11 @@ class ManagerHomeActivity : AppCompatActivity() {
         binding.btnAddCustomer.setOnClickListener {
             val intent = Intent(this@ManagerHomeActivity, RegisterCustomerForm::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.btnQueryCustomer.setOnClickListener {
             val intent = Intent(this@ManagerHomeActivity, CustomerDetailActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
 }
